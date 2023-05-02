@@ -4,14 +4,14 @@ import 'package:medical_health_careapp_ui/constants/image_path.dart';
 import 'package:medical_health_careapp_ui/screens/sign_up_screen.dart';
 import 'package:medical_health_careapp_ui/themes/app_color.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignInScreen extends StatefulWidget {
+  const SignInScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignInScreen> createState() => _SignInScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignInScreenState extends State<SignInScreen> {
   bool passToggle = true;
   @override
   Widget build(BuildContext context) {
@@ -23,12 +23,13 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               const SizedBox(height: 10),
               Padding(
-                padding: const EdgeInsets.all(30),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 30, vertical: 5),
                 child: Image.asset(ImagePath.doctor),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 50),
               const Padding(
-                padding: EdgeInsets.all(25),
+                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
                 child: TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
@@ -38,7 +39,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(25),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 30, vertical: 5),
                 child: TextField(
                   obscureText: passToggle ? true : false,
                   decoration: InputDecoration(
@@ -65,7 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              const SizedBox(height: 15),
+              const SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.all(25),
                 child: SizedBox(

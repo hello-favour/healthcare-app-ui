@@ -73,7 +73,7 @@ class WelcomeHome extends StatelessWidget {
                       padding:
                           EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                       child: AppText(
-                        text: "Login In",
+                        text: "Sign In",
                         size: 25,
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -85,12 +85,19 @@ class WelcomeHome extends StatelessWidget {
                   color: AppColors.primaryColors,
                   borderRadius: BorderRadius.circular(10),
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) {
+                          return const LoginScreen();
+                        }),
+                      );
+                    },
                     child: const Padding(
                       padding:
                           EdgeInsets.symmetric(vertical: 15, horizontal: 35),
                       child: AppText(
-                        text: "Login Out",
+                        text: "Sign Up",
                         size: 25,
                         color: Colors.white,
                         fontWeight: FontWeight.bold,

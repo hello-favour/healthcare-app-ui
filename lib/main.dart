@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medical_health_careapp_ui/screens/login_screen.dart';
+import 'package:medical_health_careapp_ui/screens/sign_up_screen.dart';
 import 'package:medical_health_careapp_ui/screens/welcome_home.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: LoginScreen(),
+      home: WelcomeHome(),
     );
   }
 }
