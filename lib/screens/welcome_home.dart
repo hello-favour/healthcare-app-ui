@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:medical_health_careapp_ui/components/app_font.dart';
 import 'package:medical_health_careapp_ui/constants/image_path.dart';
+import 'package:medical_health_careapp_ui/screens/login_screen.dart';
 import 'package:medical_health_careapp_ui/themes/app_color.dart';
 
 class WelcomeHome extends StatelessWidget {
@@ -60,7 +61,14 @@ class WelcomeHome extends StatelessWidget {
                   color: AppColors.primaryColors,
                   borderRadius: BorderRadius.circular(10),
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) {
+                          return const LoginScreen();
+                        }),
+                      );
+                    },
                     child: const Padding(
                       padding:
                           EdgeInsets.symmetric(vertical: 15, horizontal: 40),
