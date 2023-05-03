@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medical_health_careapp_ui/components/app_font.dart';
 import 'package:medical_health_careapp_ui/constants/image_path.dart';
-import 'package:medical_health_careapp_ui/screens/login_screen.dart';
+import 'package:medical_health_careapp_ui/screens/sign_in_screen.dart';
 import 'package:medical_health_careapp_ui/themes/app_color.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -128,7 +128,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return const LoginScreen();
+                        return const SignInScreen();
                       }));
                     },
                     child: const AppText(

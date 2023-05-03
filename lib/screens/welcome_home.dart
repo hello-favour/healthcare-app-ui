@@ -2,8 +2,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:medical_health_careapp_ui/components/app_font.dart';
+import 'package:medical_health_careapp_ui/components/nav_bar_roots.dart';
 import 'package:medical_health_careapp_ui/constants/image_path.dart';
-import 'package:medical_health_careapp_ui/screens/login_screen.dart';
+import 'package:medical_health_careapp_ui/screens/sign_in_screen.dart';
 import 'package:medical_health_careapp_ui/themes/app_color.dart';
 
 class WelcomeHome extends StatelessWidget {
@@ -18,11 +19,18 @@ class WelcomeHome extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            const SizedBox(height: 10),
+            const SizedBox(height: 15),
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return const NavBarRoots();
+                    }),
+                  );
+                },
                 child: const AppText(
                   text: "SKIP",
                   color: Colors.black,
@@ -65,7 +73,7 @@ class WelcomeHome extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) {
-                          return const LoginScreen();
+                          return const SignInScreen();
                         }),
                       );
                     },
@@ -89,7 +97,7 @@ class WelcomeHome extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) {
-                          return const LoginScreen();
+                          return const SignInScreen();
                         }),
                       );
                     },
