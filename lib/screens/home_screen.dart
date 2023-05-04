@@ -42,6 +42,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 CircleAvatar(
                   radius: 25,
+                  backgroundImage: AssetImage(ImagePath.doctor3),
                 ),
               ],
             ),
@@ -187,6 +188,74 @@ class HomeScreen extends StatelessWidget {
                 );
               },
             ),
+          ),
+          const SizedBox(height: 15),
+          const Padding(
+            padding: EdgeInsets.only(left: 15),
+            child: AppText(
+              text: "Popular Doctors",
+              color: Colors.black54,
+              fontWeight: FontWeight.w500,
+              size: 23,
+            ),
+          ),
+          GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+            ),
+            itemCount: 4,
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemBuilder: (context, index) {
+              return Container(
+                margin: const EdgeInsets.all(10),
+                padding: const EdgeInsets.symmetric(vertical: 15),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: AppPadding.appRadius,
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 4,
+                      spreadRadius: 1,
+                    ),
+                  ],
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    CircleAvatar(
+                      radius: 35,
+                      backgroundImage: AssetImage(_images[index]),
+                    ),
+                    const AppText(
+                      text: "Dr. Doctor Name",
+                      color: Colors.black54,
+                      size: 18,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    const AppText(
+                      text: "Therapist",
+                      color: Colors.black54,
+                    ),
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                        ),
+                        AppText(
+                          text: "4.9",
+                          color: Colors.black45,
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              );
+            },
           ),
         ],
       ),
