@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppText extends StatelessWidget {
   final String text;
-  final double size;
+  final double? size;
   final Color color;
   final FontWeight? fontWeight;
   final double? letterSpacing;
@@ -10,7 +10,7 @@ class AppText extends StatelessWidget {
   const AppText({
     Key? key,
     required this.text,
-    required this.size,
+    this.size,
     required this.color,
     this.fontWeight,
     this.letterSpacing,
