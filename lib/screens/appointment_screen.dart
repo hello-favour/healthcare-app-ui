@@ -105,7 +105,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                               color: Colors.white,
                             ),
                             child: const Icon(
-                              Icons.chat,
+                              Icons.chat_bubble,
                               color: AppColors.primaryColors,
                               size: 25,
                             ),
