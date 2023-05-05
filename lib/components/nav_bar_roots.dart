@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medical_health_careapp_ui/screens/home_screen.dart';
+import 'package:medical_health_careapp_ui/screens/settings_screen.dart';
 import 'package:medical_health_careapp_ui/themes/app_color.dart';
 
 class NavBarRoots extends StatefulWidget {
@@ -15,7 +16,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
     HomeScreen(),
     Container(),
     Container(),
-    Container(),
+    const SettingsScreen(),
   ];
   @override
   Widget build(BuildContext context) {

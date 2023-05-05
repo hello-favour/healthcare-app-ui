@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medical_health_careapp_ui/components/app_font.dart';
 import 'package:medical_health_careapp_ui/constants/image_path.dart';
+import 'package:medical_health_careapp_ui/screens/appointment_screen.dart';
 import 'package:medical_health_careapp_ui/themes/app_color.dart';
 import 'package:medical_health_careapp_ui/themes/app_padding.dart';
 
@@ -207,52 +208,59 @@ class HomeScreen extends StatelessWidget {
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             itemBuilder: (context, index) {
-              return Container(
-                margin: const EdgeInsets.all(10),
-                padding: const EdgeInsets.symmetric(vertical: 15),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: AppPadding.appRadius,
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.black12,
-                      blurRadius: 4,
-                      spreadRadius: 1,
-                    ),
-                  ],
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    CircleAvatar(
-                      radius: 35,
-                      backgroundImage: AssetImage(_images[index]),
-                    ),
-                    const AppText(
-                      text: "Dr. Doctor Name",
-                      color: Colors.black54,
-                      size: 18,
-                      fontWeight: FontWeight.w500,
-                    ),
-                    const AppText(
-                      text: "Therapist",
-                      color: Colors.black54,
-                    ),
-                    Row(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        Icon(
-                          Icons.star,
-                          color: Colors.amber,
-                        ),
-                        AppText(
-                          text: "4.9",
-                          color: Colors.black45,
-                        ),
-                      ],
-                    )
-                  ],
+              return InkWell(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const AppointmentScreen();
+                  }));
+                },
+                child: Container(
+                  margin: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.symmetric(vertical: 15),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: AppPadding.appRadius,
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 4,
+                        spreadRadius: 1,
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      CircleAvatar(
+                        radius: 35,
+                        backgroundImage: AssetImage(_images[index]),
+                      ),
+                      const AppText(
+                        text: "Dr. Doctor Name",
+                        color: Colors.black54,
+                        size: 18,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      const AppText(
+                        text: "Therapist",
+                        color: Colors.black54,
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Icon(
+                            Icons.star,
+                            color: Colors.amber,
+                          ),
+                          AppText(
+                            text: "4.9",
+                            color: Colors.black45,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               );
             },
