@@ -196,7 +196,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                           padding: const EdgeInsets.symmetric(vertical: 15),
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: AppPadding.appRadius,
+                            borderRadius: ElementSpacing.appRadius,
                             boxShadow: const [
                               BoxShadow(
                                 blurRadius: 4,
@@ -327,7 +327,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                 padding: const EdgeInsets.symmetric(vertical: 18),
                 decoration: BoxDecoration(
                   color: AppColors.primaryColors,
-                  borderRadius: AppPadding.appRadius,
+                  borderRadius: ElementSpacing.appRadius,
                 ),
                 child: const Center(
                   child: AppText(

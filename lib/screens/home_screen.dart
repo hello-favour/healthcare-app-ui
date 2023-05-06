@@ -104,7 +104,7 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: AppPadding.appRadius,
+                    borderRadius: ElementSpacing.appRadius,
                     boxShadow: const [
                       BoxShadow(
                         color: Colors.black12,
@@ -169,7 +169,7 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: AppPadding.appRadius,
+                    borderRadius: ElementSpacing.appRadius,
                     boxShadow: const [
                       BoxShadow(
                         color: Colors.black12,
@@ -219,7 +219,7 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 15),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: AppPadding.appRadius,
+                    borderRadius: ElementSpacing.appRadius,
                     boxShadow: const [
                       BoxShadow(
                         color: Colors.black12,

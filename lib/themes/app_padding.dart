@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
 
-class AppPadding {
+class ElementSpacing {
   static final BorderRadius appRadius = BorderRadius.circular(10);
 }
