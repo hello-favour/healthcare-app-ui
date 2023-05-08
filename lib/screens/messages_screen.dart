@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medical_health_careapp_ui/components/app_font.dart';
 import 'package:medical_health_careapp_ui/constants/image_path.dart';
+import 'package:medical_health_careapp_ui/screens/chat_screen.dart';
 import 'package:medical_health_careapp_ui/themes/app_color.dart';
 import 'package:medical_health_careapp_ui/themes/app_padding.dart';
 
@@ -70,6 +71,16 @@ class MessageScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 30),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: AppText(
+              text: "Active Now",
+              color: AppColors.appBlack,
+              size: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 10),
           SizedBox(
             height: 90,
             child: ListView.builder(
@@ -89,7 +100,7 @@ class MessageScreen extends StatelessWidget {
                         blurRadius: 8,
                         spreadRadius: 1,
                         color: Colors.black12,
-                      )
+                      ),
                     ],
                   ),
                   child: Stack(
@@ -129,6 +140,58 @@ class MessageScreen extends StatelessWidget {
                 );
               },
             ),
+          ),
+          const SizedBox(height: 10),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: AppText(
+              text: "Recent Chat",
+              color: AppColors.appBlack,
+              size: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          ListView.builder(
+            physics: const NeverScrollableScrollPhysics(),
+            itemCount: 6,
+            shrinkWrap: true,
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: ListTile(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const ChatScreen();
+                    }));
+                  },
+                  leading: CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage(_images[index]),
+                  ),
+                  title: const AppText(
+                    text: "Dr. Doctor Name",
+                    color: Colors.black54,
+                    size: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  subtitle: const Text(
+                    "Hello, doctor are you there",
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: AppColors.appBlack,
+                    ),
+                  ),
+                  trailing: const AppText(
+                    text: "12:30",
+                    color: AppColors.appBlack,
+                    size: 15,
+                  ),
+                ),
+              );
+            },
           ),
         ],
       ),
