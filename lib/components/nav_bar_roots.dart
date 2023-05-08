@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medical_health_careapp_ui/screens/home_screen.dart';
+import 'package:medical_health_careapp_ui/screens/messages_screen.dart';
 import 'package:medical_health_careapp_ui/screens/schedule_screen.dart';
 import 'package:medical_health_careapp_ui/screens/settings_screen.dart';
 import 'package:medical_health_careapp_ui/themes/app_color.dart';
@@ -15,7 +16,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
   int _selectedScreenIndex = 0;
   final _screens = [
     HomeScreen(),
-    Container(),
+    MessageScreen(),
     const ScheduleScreen(),
     const SettingsScreen(),
   ];
